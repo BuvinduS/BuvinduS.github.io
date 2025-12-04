@@ -1,0 +1,36 @@
+"use client";
+import About from "./components/About";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+
+export default function Home() {
+  return (
+    <>
+      {/* NavBar */}
+      <NavBar />
+
+      {/* Main 2-column layout */}
+      <div className="flex flex-col lg:flex-row min-h-screen">
+        {/* LEFT COLUMN: Static Header/Profile */}
+        <div className="hidden lg:flex lg:sticky lg:top-0 lg:h-screen lg:w-1/2 items-center justify-center bg-gray-100">
+          <Header />
+        </div>
+
+        {/* RIGHT COLUMN: Scrollable content */}
+        <div className="w-full lg:w-1/2">
+          <div className="lg:px-12">
+            {/* Header for mobile only */}
+            <div className="lg:hidden">
+              <Header />
+            </div>
+
+            {/* About section and other scrollable content */}
+            <About />
+
+            {/* Add more sections here */}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
