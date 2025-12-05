@@ -1,4 +1,4 @@
-import { assets, infoList, toolsData } from "@/assets/assets";
+import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -6,45 +6,43 @@ const About = () => {
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
-      <h2 className="text-center text-5xl font-Outfit">About Us!</h2>
+      <h2 className="text-center text-5xl font-Outfit">About Me</h2>
 
-      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+      <div className="flex w-full flex-col lg:flex-row items-start gap-20 my-20">
+        {/* Image with popping frame */}
+        <div className="relative w-64 sm:w-80 max-w-none">
+          {/* Frame behind image */}
+          <div className="absolute top-4 left-4 w-full h-full border-4 border-gray-400 rounded-3xl bg-gray-700"></div>
+
+          {/* Image itself */}
+          <div className="relative w-full h-0 pb-[100%] rounded-3xl overflow-hidden shadow-2xl -translate-x-2 -translate-y-2 transition-transform duration-500 hover:scale-105">
+            <Image
+              src={assets.user_image}
+              alt="user"
+              fill
+              className="object-cover w-full h-full rounded-3xl"
+            />
+          </div>
+        </div>
+
+        {/* <div className="flex w-full flex-col lg:flex-row items-start gap-20 my-20">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
             src={assets.user_image}
             alt="user"
             className="w-full rounded-3xl"
           />
-        </div>
+        </div> */}
+
         <div className="flex-1">
+          <h2 className="text-4xl font-Outfit pb-5">
+            Computer Science and Engineering Undergraduate
+          </h2>
           <p className="mb-10 max-w-2xl font-Outfit">
-            srgsrgsrgawegqjrngkasjng awkrjgnak ekga kwe gkakjanwgek
+            Computer science engineering undergraduate with strong skills in
+            problem solving and communication. Passionate about robotics, and
+            real world problem solving
           </p>
-
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <li
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black"
-                key={index}
-              >
-                <Image src={icon} alt={title} />
-                <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
-              </li>
-            ))}
-          </ul>
-          <h4 className="my-6 text-gray-700 font-Ovo">Tools Used:</h4>
-
-          <ul className="flex items-center gap-3 sm:gap-5">
-            {toolsData.map((tool, index) => (
-              <li
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
-                key={index}
-              >
-                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </div>

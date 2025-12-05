@@ -25,7 +25,7 @@ const Header = () => {
             </h3>
 
             <h1 className="text-3xl sm:text-6xl lg:text-[57px] font-Outfit">
-              I'm Buvindu Suraweera
+              I'm NAME
             </h1>
 
             <p className="max-w-2xl font-Ovo">
@@ -38,7 +38,7 @@ const Header = () => {
                 href="#contact"
                 className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
               >
-                Contact Us
+                Contact
                 <Image src={assets.right_arrow_white} alt="" className="w-4" />
               </a>
 

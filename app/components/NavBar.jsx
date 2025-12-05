@@ -56,13 +56,13 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#projects">
-              Projects
+            <a className="font-Ovo" href="#qualifications">
+              Qualifications
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#qualifications">
-              Qualifications
+            <a className="font-Ovo" href="#projects">
+              Projects
             </a>
           </li>
           <li>
@@ -113,13 +113,13 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#projects">
-              Projects
+            <a className="font-Ovo" onClick={closeMenu} href="#qualifications">
+              Qualifications
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#qualifications">
-              Qualifications
+            <a className="font-Ovo" onClick={closeMenu} href="#projects">
+              Projects
             </a>
           </li>
           <li>

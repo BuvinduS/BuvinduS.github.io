@@ -167,43 +167,84 @@ export const projectData = [
     image: "/project_images/ikmangaman_img.png",
     description:
       "Worked on API handling and backend development for Ikmangaman, an AI-powered travel planning platform designed to transform the way people explore domestic tourism in Sri Lanka.",
-    gitlink: "https://github.com/nsanjula/Ikmangaman.lk.git",
-    other_links: "https://ikmangaman.netlify.app/" /*may not be available*/,
-    other_link_text: "Live Demo",
+    links: [
+      {
+        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+        text: "GitHub",
+        icon: "github",
+      },
+      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
+      { url: "https://blog.com/gesture", text: "Read Blog" },
+    ],
   },
   {
     name: "Gesture Based Volume Controller",
     image: "/project_images/volume_control_image.png",
     description:
       "Uses OpenCV, MediaPipe and the Python Core Audio Windows Library (pycaw) to use computer vision and adjust system volume of a windows based device",
-    gitlink: "https://github.com/BuvinduS/Hand-Tracking-Volume-Control.git",
+    links: [
+      {
+        url: "https://github.com/BuvinduS/Hand-Tracking-Volume-Control.git",
+        text: "GitHub",
+        icon: "github",
+      },
+    ],
   },
   {
     name: "project2",
     image: "/project_images/image2.png",
     description: "shfffffffffffffffffffffffffff aihrb ailh ash vaish v",
-    gitlink: "www.github.com/project",
-    other_links: "argagvrwa" /*may not be available*/,
+    links: [
+      {
+        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+        text: "GitHub",
+        icon: "github",
+      },
+      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
+      { url: "https://blog.com/gesture", text: "Read Blog" },
+    ],
   },
   {
     name: "project2",
     image: "/project_images/image2.png",
     description:
       "This is a very long text used to check whether this thing actually works correctly or not. I am not really sure whether this will get formatted correctly :) \nEDIT: It does!",
-    gitlink: "www.github.com/project",
+    links: [
+      {
+        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+        text: "GitHub",
+        icon: "github",
+      },
+      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
+      { url: "https://blog.com/gesture", text: "Read Blog" },
+    ],
   },
   {
     name: "project2",
     image: "/project_images/image2.png",
     description: "shfffffffffffffffffffffffffff aihrb ailh ash vaish v",
-    gitlink: "www.github.com/project",
-    other_links: "argagvrwa" /*may not be available*/,
+    links: [
+      {
+        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+        text: "GitHub",
+        icon: "github",
+      },
+      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
+      { url: "https://blog.com/gesture", text: "Read Blog" },
+    ],
   },
   {
     name: "project2",
     image: "/project_images/image2.png",
     description: "shfffffffffffffffffffffffffff aihrb ailh ash vaish v",
-    gitlink: "www.github.com/project",
-    other_links: "argagvrwa" /*may not be available*/,
+    links: [
+      {
+        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+        text: "GitHub",
+        icon: "github",
+      },
+      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
+      { url: "https://blog.com/gesture", text: "Read Blog" },
+    ],
   },
 ];

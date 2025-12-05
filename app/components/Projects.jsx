@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full py-10 px-4 sm:px-10 lg:px-20">
+    <div id="projects" className="w-full py-25 px-4 sm:px-10 lg:px-20">
       <h2 className="text-center text-5xl font-Outfit">Projects</h2>
       <p className="text-center mt-6 mb-14 font-Outfit">
         Some of the projects I have worked on:
@@ -34,27 +34,24 @@ const Projects = () => {
 
               {/*Links*/}
               <div className="flex gap-4 mt-auto">
-                {project.gitlink && (
+                {project.links?.map((link, idx) => (
                   <a
-                    href={project.gitlink}
+                    key={idx}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 w-full justify-center py-2 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition"
+                    className={`flex items-center gap-2 py-2 px-4 rounded-lg font-medium transition
+                      ${
+                        link.icon === "github"
+                          ? "bg-gray-900 text-white hover:bg-gray-800"
+                          : "bg-blue-600 text-white hover:bg-blue-500"
+                      }
+                      flex-1 justify-center`}
                   >
-                    <FaGithub className="text-xl" />
-                    {project.gitText || "Code"}
+                    {link.icon === "github" && <FaGithub className="text-xl" />}
+                    {link.text}
                   </a>
-                )}
-                {project.other_links && (
-                  <a
-                    href={project.other_links}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-500 transition"
-                  >
-                    {project.other_link_text || "More"}
-                  </a>
-                )}
+                ))}
               </div>
             </div>
           </div>
