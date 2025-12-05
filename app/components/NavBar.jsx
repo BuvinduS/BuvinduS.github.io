@@ -44,7 +44,7 @@ const NavBar = () => {
             className="w-28 cursor-pointer mr-14"
           /> */}
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm opacity-100">
+        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-400 shadow-sm opacity-100">
           <li>
             <a className="font-Ovo" href="#top">
               Home

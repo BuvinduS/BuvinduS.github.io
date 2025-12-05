@@ -37,6 +37,7 @@ import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 
 import UoM_logo from "./University_of_Moratuwa_logo.png";
+import CSE_logo from "./cse_logo.png";
 
 export const assets = {
   user_image,
@@ -77,6 +78,7 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   UoM_logo,
+  CSE_logo,
 };
 
 export const workData = [
