@@ -56,8 +56,8 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#qualifications">
-              Qualifications
+            <a className="font-Ovo" href="#education">
+              Education
             </a>
           </li>
           <li>
@@ -113,8 +113,8 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#qualifications">
-              Qualifications
+            <a className="font-Ovo" onClick={closeMenu} href="#education">
+              Education
             </a>
           </li>
           <li>

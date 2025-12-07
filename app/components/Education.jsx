@@ -2,13 +2,13 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
-const Qualifications = () => {
+const Education = () => {
   return (
-    <div id="qualifications" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h2 className="text-center text-5xl font-Outfit">Qualifications</h2>
+    <div id="education" className="w-full px-[12%] py-10 scroll-mt-20">
+      <h2 className="text-center text-5xl font-Outfit">Education</h2>
 
       <p className="text-center mt-6 mb-14 font-Outfit">
-        Below are the qualifications that I currently hold:
+        My education journey so far:
       </p>
 
       {/* Main Container - Adds margin & centers content */}
@@ -112,4 +112,4 @@ const Qualifications = () => {
   );
 };
 
-export default Qualifications;
+export default Education;

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import HeaderTextOnly from "./components/HeaderTextOnly";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
-import Qualifications from "./components/Qualifications";
+import Education from "./components/Education";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <HeaderTextOnly />
       <About />
-      <Qualifications />
+      <Education />
       <Projects />
     </>
   );
