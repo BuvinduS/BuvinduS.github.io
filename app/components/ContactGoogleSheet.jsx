@@ -9,23 +9,19 @@ const ContactGoogleSheet = () => {
     e.preventDefault();
     const form = e.target;
 
-    const formData = new URLSearchParams();
-    formData.append("name", form.name.value);
-    formData.append("email", form.email.value);
-    formData.append("message", form.message.value);
-    formData.append("secret", "BUVINDU'S_FORM");
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+      secret: "BUVINDU'S_FORM",
+    };
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyp9VT-6bDVUutDgFU0wnLFQaGrSG5rQu0hxiMzLzJsFdqW74aPUQXORMb_tNwQkjSy/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded", // form-encoded
-          },
-          body: formData.toString(),
-        }
-      );
+      const response = await fetch("/api/contactAPI", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data), // <-- just stringify the object
+      });
 
       const resJson = await response.json();
 
