@@ -10,6 +10,7 @@ import ContactNoForm from "./components/ContactNoForm";
 import ContactBars from "./components/ContactBars";
 import Achievements from "./components/Achievements";
 import Footer from "./components/Footer";
+import ContactGoogleSheet from "./components/ContactGoogleSheet";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       <Education />
       <Projects />
       <Achievements />
-      <Contact />
+      <ContactGoogleSheet />
       <Footer />
     </>
   );

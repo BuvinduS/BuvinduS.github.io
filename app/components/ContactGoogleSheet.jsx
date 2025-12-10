@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
-const ContactBarsAndForm = () => {
+const ContactGoogleSheet = () => {
   const [status, setStatus] = useState(""); // for submission feedback
 
   const handleSubmit = async (e) => {
@@ -14,7 +14,7 @@ const ContactBarsAndForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyUPjBdbSgHuz5OqB6pSUkGcwAUBxF9AVm-GAIsBa54jIPgeSJZ8wZi5ZVvqp74wHm1/exec",
+        "https://script.google.com/macros/s/AKfycbwkqlfVMfo2PhA7_gW8wr-ABw33g-cl8RtGveNfVduA45xK5pLAfX4K_0wVJKbxNJbn/exec",
         {
           // replace with your Apps Script URL
           method: "POST",
@@ -49,7 +49,7 @@ const ContactBarsAndForm = () => {
         <div className="flex flex-col gap-6 lg:w-1/2">
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/buvindu-suraweera/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gray-300 hover:bg-gray-200 rounded-xl p-4 shadow-md transition-transform transform hover:scale-105"
@@ -64,7 +64,7 @@ const ContactBarsAndForm = () => {
 
           {/* GitHub */}
           <a
-            href="https://github.com/yourprofile"
+            href="https://github.com/BuvinduS"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gray-300 hover:bg-gray-200 rounded-xl p-4 shadow-md transition-transform transform hover:scale-105"
@@ -79,7 +79,7 @@ const ContactBarsAndForm = () => {
 
           {/* Email */}
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:buvindudsuraweera@gmail.com"
             className="flex items-center bg-gray-300 hover:bg-gray-200 rounded-xl p-4 shadow-md transition-transform transform hover:scale-105"
           >
             <Image
@@ -137,4 +137,4 @@ const ContactBarsAndForm = () => {
   );
 };
 
-export default ContactBarsAndForm;
+export default ContactGoogleSheet;
