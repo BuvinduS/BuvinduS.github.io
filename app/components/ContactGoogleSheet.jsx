@@ -8,26 +8,23 @@ const ContactGoogleSheet = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const formData = new FormData(form);
 
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-      secret: "BUVINDU'S_FORM",
-    };
+    // Use URLSearchParams instead of FormData / JSON
+    const formData = new URLSearchParams();
+    formData.append("name", form.name.value);
+    formData.append("email", form.email.value);
+    formData.append("message", form.message.value);
+    formData.append("secret", "BUVINDU'S_FORM");
 
     try {
       const response = await fetch(
-        /*change this is you changed the webapp deployment */
         "https://script.google.com/macros/s/AKfycbyN7IjnIGj7wq2yBh1Iu6AcTPRrPede9TWbahWseH2K05bTJdoLjdAi8HRiNFXnwmOm/exec",
         {
-          // replace with your Apps Script URL
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify(data),
+          body: formData.toString(),
         }
       );
 
