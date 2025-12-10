@@ -16,7 +16,6 @@ export default function Home() {
     <>
       <NavBar />
       <Header />
-      <HeaderTextOnly />
       <About />
       <Education />
       <Projects />
