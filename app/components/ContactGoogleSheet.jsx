@@ -9,7 +9,6 @@ const ContactGoogleSheet = () => {
     e.preventDefault();
     const form = e.target;
 
-    // Use URLSearchParams instead of FormData / JSON
     const formData = new URLSearchParams();
     formData.append("name", form.name.value);
     formData.append("email", form.email.value);
@@ -18,11 +17,11 @@ const ContactGoogleSheet = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyN7IjnIGj7wq2yBh1Iu6AcTPRrPede9TWbahWseH2K05bTJdoLjdAi8HRiNFXnwmOm/exec",
+        "https://script.google.com/macros/s/AKfycbyp9VT-6bDVUutDgFU0wnLFQaGrSG5rQu0hxiMzLzJsFdqW74aPUQXORMb_tNwQkjSy/exec",
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/x-www-form-urlencoded", // form-encoded
           },
           body: formData.toString(),
         }
@@ -41,7 +40,6 @@ const ContactGoogleSheet = () => {
       setStatus("Error sending message. Please try again.");
     }
 
-    // Clear message after 5 seconds
     setTimeout(() => setStatus(""), 5000);
   };
 
