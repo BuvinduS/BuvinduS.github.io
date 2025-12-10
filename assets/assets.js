@@ -40,6 +40,7 @@ import UoM_logo from "./University_of_Moratuwa_logo.png";
 import CSE_logo from "./cse_logo.png";
 import LinkedIn_logo from "./LinkedIn_logo.png";
 import Github_logo from "./GitHub-logo.png";
+import DS_logo from "./DS_College_crest.png";
 
 export const assets = {
   user_image,
@@ -83,6 +84,7 @@ export const assets = {
   CSE_logo,
   LinkedIn_logo,
   Github_logo,
+  DS_logo,
 };
 
 export const workData = [
@@ -207,49 +209,6 @@ export const projectData = [
         text: "GitHub",
         icon: "github",
       },
-    ],
-  },
-  {
-    name: "project2",
-    image: "/project_images/image2.png",
-    description:
-      "This is a very long text used to check whether this thing actually works correctly or not. I am not really sure whether this will get formatted correctly :) \nEDIT: It does!",
-    links: [
-      {
-        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
-        text: "GitHub",
-        icon: "github",
-      },
-      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
-      { url: "https://blog.com/gesture", text: "Read Blog" },
-    ],
-  },
-  {
-    name: "project2",
-    image: "/project_images/image2.png",
-    description: "shfffffffffffffffffffffffffff aihrb ailh ash vaish v",
-    links: [
-      {
-        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
-        text: "GitHub",
-        icon: "github",
-      },
-      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
-      { url: "https://blog.com/gesture", text: "Read Blog" },
-    ],
-  },
-  {
-    name: "project2",
-    image: "/project_images/image2.png",
-    description: "shfffffffffffffffffffffffffff aihrb ailh ash vaish v",
-    links: [
-      {
-        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
-        text: "GitHub",
-        icon: "github",
-      },
-      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
-      { url: "https://blog.com/gesture", text: "Read Blog" },
     ],
   },
 ];

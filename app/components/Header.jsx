@@ -5,7 +5,7 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <div className="w-11/12 max-w-5xl mx-auto min-h-screen flex flex-col justify-center pt-28 lg:pt-26">
+      <div className="w-11/12 max-w-5xl mx-auto min-h-screen flex flex-col justify-center pt-28 lg:pt-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
           {/* Left: Image with frame (hidden on mobile) */}
           <div className="relative flex-shrink-0 w-64 sm:w-80 lg:w-96 hidden sm:block">
@@ -67,9 +67,9 @@ const Header = () => {
               </a>
 
               <a
-                href="/sample-resume.pdf"
+                href="/CV_Buvindu Suraweera.pdf"
                 download
-                className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
+                className="px-10 py-3 border rounded-full border-black flex items-center gap-2"
               >
                 Download CV
                 <Image src={assets.download_icon} alt="" className="w-4" />

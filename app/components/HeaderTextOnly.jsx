@@ -46,9 +46,9 @@ const HeaderTextOnly = () => {
           </a>
 
           <a
-            href="/sample-resume.pdf"
+            href="/CV_Buvindu Suraweera.pdf"
             download
-            className="px-12 py-4 border rounded-full border-gray-500 flex items-center gap-2 text-lg"
+            className="px-12 py-4 border rounded-full border-black flex items-center gap-2 text-lg"
           >
             Download CV
             <Image src={assets.download_icon} alt="" className="w-5" />
