@@ -15,6 +15,10 @@ export const metadata = {
   title: "Buvindu Suraweera | Computer Science and Engineering Undergraduate",
   description:
     "Portfolio of Buvindu Suraweera - showcasing web development projects, achievements, and certifications.",
+  icons: {
+    icon: "/favicon_io/favicon.ico",
+    apple: "/favicon_io/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
