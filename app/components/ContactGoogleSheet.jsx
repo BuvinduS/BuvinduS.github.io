@@ -19,7 +19,8 @@ const ContactGoogleSheet = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwkqlfVMfo2PhA7_gW8wr-ABw33g-cl8RtGveNfVduA45xK5pLAfX4K_0wVJKbxNJbn/exec",
+        /*change this is you changed the webapp deployment */
+        "https://script.google.com/macros/s/AKfycbyN7IjnIGj7wq2yBh1Iu6AcTPRrPede9TWbahWseH2K05bTJdoLjdAi8HRiNFXnwmOm/exec",
         {
           // replace with your Apps Script URL
           method: "POST",
