@@ -1,14 +1,36 @@
+"use client"; // required for useEffect
+
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { animate, stagger } from "motion";
 
 const Header = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    animate(
+      containerRef.current.querySelectorAll(".fade-item"),
+      {
+        opacity: [0, 1],
+        y: [40, 0],
+      },
+      {
+        duration: 0.8,
+        easing: "ease-out",
+        delay: stagger(0.15),
+      }
+    );
+  }, []);
+
   return (
-    <div>
-      <div className="w-11/12 max-w-5xl mx-auto min-h-screen flex flex-col justify-center pt-28 lg:pt-10">
+    <div ref={containerRef}>
+      <div className="w-11/12 max-w-5xl mx-auto min-h-screen flex flex-col justify-center pt-7 sm:pt-20 lg:pt-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
           {/* Left: Image with frame (hidden on mobile) */}
-          <div className="relative flex-shrink-0 w-64 sm:w-80 lg:w-96 hidden sm:block">
+          <div className="relative flex-shrink-0 w-64 sm:w-80 lg:w-96 hidden sm:block fade-item opacity-1">
             {/* Glowing Blur Background */}
             <div className="absolute inset-0 -z-10 blur-3xl bg-blue-500/30 rounded-full scale-110"></div>
 
@@ -28,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Image (no frame) */}
-          <div className="sm:hidden w-48 mx-auto rounded-xl overflow-hidden shadow-xl">
+          <div className="sm:hidden w-52 mx-auto rounded-xl overflow-hidden shadow-xl fade-item">
             <Image
               src={assets.profile_img}
               alt="Profile"
@@ -40,24 +62,24 @@ const Header = () => {
 
           {/* Right: Text Content */}
           <div className="text-center lg:text-left flex flex-col gap-4">
-            <h3 className="flex items-center justify-center lg:justify-start gap-2 text-xl md:text-2xl mb-2 font-Outfit">
+            <h3 className="fade-item flex items-center justify-center lg:justify-start gap-2 text-xl md:text-2xl mb-2 font-Outfit mt-[-20px] sm:mt-0">
               Hello! I'm
             </h3>
 
             <h1
-              className="lg:whitespace-nowrap text-5xl sm:text-6xl lg:text-[80px] font-bold font-Outfit 
+              className="fade-item lg:whitespace-nowrap text-4xl sm:text-6xl lg:text-[80px] font-bold font-Outfit 
              bg-gradient-to-r from-purple-800 via-blue-700 to-indigo-700 
-             bg-clip-text text-transparent drop-shadow-md"
+             bg-clip-text text-transparent drop-shadow-md mt-[-20px] sm:mt-0"
             >
               Buvindu Suraweera
             </h1>
 
-            <p className="lg:whitespace-nowrap max-w-full sm:max-w-xl mx-auto lg:mx-0 font-mono text-center lg:text-left">
+            <p className="fade-item lg:whitespace-nowrap max-w-full sm:max-w-xl mx-auto lg:mx-0 font-mono text-center lg:text-left">
               Computer Science and Engineering Undergraduate at Univerity of
               Moratuwa
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mt-4">
+            <div className="fade-item flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mt-4">
               <a
                 href="#contact"
                 className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"

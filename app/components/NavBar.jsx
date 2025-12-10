@@ -43,32 +43,32 @@ const NavBar = () => {
         </a>
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-400 shadow-sm opacity-100">
           <li>
-            <a className="font-Ovo" href="#top">
+            <a className="font-Outfit" href="#top">
               Home
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#about">
+            <a className="font-Outfit" href="#about">
               About
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#education">
+            <a className="font-Outfit" href="#education">
               Education
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#projects">
+            <a className="font-Outfit" href="#projects">
               Projects
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#achievements">
+            <a className="font-Outfit" href="#achievements">
               Achievements
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#contact">
+            <a className="font-Outfit" href="#contact">
               Contact
             </a>
           </li>
@@ -94,7 +94,7 @@ const NavBar = () => {
 
         <ul
           ref={sideMenuref}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-5- h-screen bg-rose-50 transition duration-500"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-5- h-screen bg-gray-300 transition duration-500"
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
@@ -105,32 +105,32 @@ const NavBar = () => {
           </div>
 
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#top">
+            <a className="font-Outfit" onClick={closeMenu} href="#top">
               Home
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#about">
+            <a className="font-Outfit" onClick={closeMenu} href="#about">
               About
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#education">
+            <a className="font-Outfit" onClick={closeMenu} href="#education">
               Education
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#projects">
+            <a className="font-Outfit" onClick={closeMenu} href="#projects">
               Projects
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#achievements">
+            <a className="font-Outfit" onClick={closeMenu} href="#achievements">
               Achievements
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#contact">
+            <a className="font-Outfit" onClick={closeMenu} href="#contact">
               Contact
             </a>
           </li>
