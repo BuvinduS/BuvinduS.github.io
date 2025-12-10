@@ -10,7 +10,12 @@ const ContactGoogleSheet = () => {
     const form = e.target;
     const formData = new FormData(form);
 
-    formData.append("secret", "BUVINDU'S_FORM");
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+      secret: "BUVINDU'S_FORM",
+    };
 
     try {
       const response = await fetch(
@@ -18,11 +23,16 @@ const ContactGoogleSheet = () => {
         {
           // replace with your Apps Script URL
           method: "POST",
-          body: formData,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         }
       );
 
-      if (response.ok) {
+      const resJson = await response.json();
+
+      if (resJson.result === "success") {
         setStatus("Message sent successfully!");
         form.reset();
       } else {
