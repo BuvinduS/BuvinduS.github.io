@@ -17,7 +17,7 @@ const ContactGoogleSheet = () => {
     };
 
     try {
-      const response = await fetch("/api/contactAPI", {
+      const response = await fetch("/api/contactAPI.js", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data), // <-- just stringify the object
