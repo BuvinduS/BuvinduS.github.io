@@ -15,7 +15,7 @@ const ContactBarsAndForm = () => {
         <div className="flex flex-col gap-6 lg:w-1/2">
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/buvindu-suraweera/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gray-300 hover:bg-gray-200 rounded-xl p-4 shadow-md transition-transform transform hover:scale-105"
@@ -30,7 +30,7 @@ const ContactBarsAndForm = () => {
 
           {/* GitHub */}
           <a
-            href="https://github.com/yourprofile"
+            href="https://github.com/BuvinduS"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gray-300 hover:bg-gray-200 rounded-xl p-4 shadow-md transition-transform transform hover:scale-105"
@@ -45,7 +45,7 @@ const ContactBarsAndForm = () => {
 
           {/* Email */}
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:buvindudsuraweera@gmail.com"
             className="flex items-center bg-gray-300 hover:bg-gray-200 rounded-xl p-4 shadow-md transition-transform transform hover:scale-105"
           >
             <Image
