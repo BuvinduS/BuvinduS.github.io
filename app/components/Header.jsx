@@ -50,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Image (no frame) */}
-          <div className="sm:hidden w-52 mx-auto rounded-xl overflow-hidden shadow-xl fade-item">
+          <div className="sm:hidden w-64 mx-auto rounded-xl overflow-hidden shadow-xl fade-item">
             <Image
               src={assets.profile_img}
               alt="Profile"
