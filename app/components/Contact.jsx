@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
 const ContactBarsAndForm = () => {
+  const [result, setResult] = useState();
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "02ac1b6e-f573-4af1-823f-cee424809d94");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <div id="contact" className="w-full px-[12%] py-16 scroll-mt-20">
       <h2 className="text-center text-5xl font-Outfit mb-6">Contact Me</h2>
@@ -58,19 +83,24 @@ const ContactBarsAndForm = () => {
         </div>
 
         {/* Right: Contact Form */}
-        <form className="flex-1 flex flex-col gap-6 bg-gray-400 p-8 rounded-xl shadow-lg">
+        <form
+          onSubmit={onSubmit}
+          className="flex-1 flex flex-col gap-6 bg-gray-400 p-8 rounded-xl shadow-lg"
+        >
           <div className="flex flex-col md:flex-row gap-4">
             <input
               type="text"
               placeholder="Enter your name"
               required
               className="flex-1 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="name"
             />
             <input
               type="email"
               placeholder="Enter your email"
               required
               className="flex-1 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="email"
             />
           </div>
 
@@ -79,14 +109,18 @@ const ContactBarsAndForm = () => {
             placeholder="Enter your message"
             required
             className="p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            name="message"
           />
 
           <button
             type="submit"
-            className="self-start px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"
+            className="cursor-pointer w-full px-6 py-1 bg-blue-600 text-white rounded-2xl font-Outfit hover:bg-blue-700 transition-colors flex justify-center items-center gap-2"
           >
-            Submit message
+            Submit message{" "}
+            <Image src={assets.right_arrow_white} alt="" className="w-4" />
           </button>
+
+          <p className="mt-4 font-Outfit">{result}</p>
         </form>
       </div>
     </div>

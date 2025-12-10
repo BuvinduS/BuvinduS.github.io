@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
+/*DO NOT USE - DOES NOT WORK
+  Got some CORS header issue that needs to be fixed
+*/
+
 const ContactGoogleSheet = () => {
   const [status, setStatus] = useState(""); // for submission feedback
 
