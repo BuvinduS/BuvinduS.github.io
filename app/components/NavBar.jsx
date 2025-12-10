@@ -26,14 +26,11 @@ const NavBar = () => {
 
   return (
     <>
-      {/* <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
-        <Image src={assets.header_bg_color} alt="" className="w-full" />
-      </div> */}
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4
       flex items-center justify-between z-50 ${
         isScroll
-          ? "lg:bg-gradient-to-br lg:from-gray-600 lg:to-gray-100 lg:backdrop-blur-md lg:shadow-sm"
+          ? "lg:bg-gradient-to-br lg:from-gray-600 lg:to-gray-200 lg:backdrop-blur-md lg:shadow-sm"
           : ""
       }`}
       >
@@ -66,14 +63,19 @@ const NavBar = () => {
             </a>
           </li>
           <li>
+            <a className="font-Ovo" href="#achievements">
+              Achievements
+            </a>
+          </li>
+          <li>
             <a className="font-Ovo" href="#contact">
-              Contact Us
+              Contact
             </a>
           </li>
         </ul>
 
         <div className="flex items-center gap-4">
-          <button>
+          {/* <button>
             <Image src={assets.moon_icon} alt="" className="w-6" />
           </button>
           <a
@@ -81,7 +83,7 @@ const NavBar = () => {
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
           >
             Contact <Image src={assets.arrow_icon} alt="" className="w-3" />
-          </a>
+          </a> */}
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
             <Image src={assets.menu_black} alt="" className="w-6" />
@@ -123,8 +125,13 @@ const NavBar = () => {
             </a>
           </li>
           <li>
+            <a className="font-Ovo" onClick={closeMenu} href="#achievements">
+              Achievements
+            </a>
+          </li>
+          <li>
             <a className="font-Ovo" onClick={closeMenu} href="#contact">
-              Contact Us
+              Contact
             </a>
           </li>
         </ul>

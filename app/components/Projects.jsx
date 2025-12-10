@@ -18,7 +18,7 @@ const Projects = () => {
             className="group flex flex-col min-h-[520px] border rounded-xl overflow-hidden shadow-lg hover:bg-gray-400 hover:scale-103 transition-all duration-500"
           >
             {/* Image */}
-            <div className="w-full h-72 relative">
+            <div className="w-full aspect-video relative">
               <Image
                 src={project.image}
                 alt={project.name}

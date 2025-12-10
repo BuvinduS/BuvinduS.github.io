@@ -8,6 +8,7 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import ContactNoForm from "./components/ContactNoForm";
 import ContactBars from "./components/ContactBars";
+import Achievements from "./components/Achievements";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <Education />
       <Projects />
+      <Achievements />
       <Contact />
     </>
   );

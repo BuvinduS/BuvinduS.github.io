@@ -180,7 +180,7 @@ export const projectData = [
         icon: "github",
       },
       { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
-      { url: "https://blog.com/gesture", text: "Read Blog" },
+      // { url: "https://blog.com/gesture", text: "Read Blog" },
     ],
   },
   {
@@ -197,17 +197,16 @@ export const projectData = [
     ],
   },
   {
-    name: "project2",
-    image: "/project_images/image2.png",
-    description: "shfffffffffffffffffffffffffff aihrb ailh ash vaish v",
+    name: "8-bit Nano Processor",
+    image: "/project_images/NanoPro_img.png",
+    description:
+      " Developed a 4 bit nano processor capable of executing various instructions using VHDL and AMD Vivado™ Design Suite",
     links: [
       {
         url: "https://github.com/nsanjula/Ikmangaman.lk.git",
         text: "GitHub",
         icon: "github",
       },
-      { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
-      { url: "https://blog.com/gesture", text: "Read Blog" },
     ],
   },
   {
@@ -252,5 +251,35 @@ export const projectData = [
       { url: "https://ikmangaman.netlify.app/", text: "Live Demo" },
       { url: "https://blog.com/gesture", text: "Read Blog" },
     ],
+  },
+];
+
+export const achievementData = [
+  {
+    title: "Fundamentals of Accelerated Data Science",
+    description:
+      "Execution of end-to-end GPU accelerated data science workflows",
+
+    offered_by: "NVIDIA",
+    url: "https://learn.nvidia.com/certificates?id=bcJd4Q9cS-6hVB9DQ4fqIw" /*Might not be there*/,
+  },
+
+  {
+    title: "The Arduino Platform and C Programming",
+    description:
+      "Introduction to Arduino and implementation of serial communication protocols",
+    offered_by: "Coursera, University of California, Irvine",
+    url: "https://www.coursera.org/account/accomplishments/verify/3MBR32IJWJ0D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" /*Might not be there*/,
+  },
+  {
+    title: "Python (Basic)",
+    offered_by: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/b3c6b346c617?trk=public_profile_see-credential" /*Might not be there*/,
+  },
+  {
+    title: "Finalist - IDEALIZE 2025",
+    description:
+      "Island-wide Mobile App and Web Development competition organized by AIESEC in University of Moratuwa",
+    img: "/achievement_images/IDEALIZE_2025.jpg",
   },
 ];
