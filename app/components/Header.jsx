@@ -61,21 +61,21 @@ const Header = () => {
           </div>
 
           {/* Right: Text Content */}
-          <div className="text-center lg:text-left flex flex-col gap-4">
+          <div className="text-center lg:text-left flex flex-col gap-4 lg:pt-10">
             <h3 className="fade-item flex items-center justify-center lg:justify-start gap-2 text-xl md:text-2xl mb-2 font-Outfit mt-[-20px] sm:mt-0">
               Hello! I'm
             </h3>
 
             <h1
-              className="fade-item lg:whitespace-nowrap text-4xl sm:text-6xl lg:text-[80px] font-bold font-Outfit 
+              className="fade-item lg:whitespace-normal xl:whitespace-nowrap text-4xl sm:text-6xl lg:text-[80px] font-bold font-Outfit 
              bg-gradient-to-r from-purple-800 via-blue-700 to-indigo-700 
              bg-clip-text text-transparent drop-shadow-md mt-[-20px] sm:mt-0"
             >
               Buvindu Suraweera
             </h1>
 
-            <p className="fade-item lg:whitespace-nowrap max-w-full sm:max-w-xl mx-auto lg:mx-0 font-mono text-center lg:text-left">
-              Computer Science and Engineering Undergraduate at Univerity of
+            <p className="fade-item lg:whitespace-normal xl:whitespace-nowrap max-w-full sm:max-w-xl mx-auto lg:mx-0 font-mono text-center lg:text-left">
+              Computer Science and Engineering Undergraduate at University of
               Moratuwa
             </p>
 

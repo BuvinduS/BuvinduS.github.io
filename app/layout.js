@@ -18,6 +18,7 @@ export const metadata = {
   icons: {
     icon: "/favicon_io/favicon.ico",
     apple: "/favicon_io/apple-touch-icon.png",
+    shortcut: "/favicon_io/android-chrome",
   },
 };
 
