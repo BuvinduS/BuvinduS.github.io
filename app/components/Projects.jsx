@@ -1,7 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import { projectData } from "@/assets/assets";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaYoutube } from "react-icons/fa";
+
+const iconMap = {
+  github: FaGithub,
+  youtube: FaYoutube,
+};
+
+const styleMap = {
+  github: "bg-gray-900 text-white hover:bg-gray-800",
+  youtube: "bg-red-600 text-white hover:bg-red-500",
+  default: "bg-blue-600 text-white hover:bg-blue-500",
+};
 
 const Projects = () => {
   return (
@@ -34,24 +45,25 @@ const Projects = () => {
 
               {/*Links*/}
               <div className="flex gap-4 mt-auto">
-                {project.links?.map((link, idx) => (
-                  <a
-                    key={idx}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-2 py-2 px-4 rounded-lg font-medium transition
-                      ${
-                        link.icon === "github"
-                          ? "bg-gray-900 text-white hover:bg-gray-800"
-                          : "bg-blue-600 text-white hover:bg-blue-500"
-                      }
-                      flex-1 justify-center`}
-                  >
-                    {link.icon === "github" && <FaGithub className="text-xl" />}
-                    {link.text}
-                  </a>
-                ))}
+                {project.links?.map((link, idx) => {
+                  const Icon = iconMap[link.icon];
+                  const styles = styleMap[link.icon] || styleMap.default;
+
+                  return (
+                    <a
+                      key={idx}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 py-2 px-4 rounded-lg font-medium transition
+                        ${styles}
+                        flex-1 justify-center`}
+                    >
+                      {Icon && <Icon className="text-xl" />}
+                      {link.text}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
