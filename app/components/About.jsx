@@ -40,8 +40,8 @@ const About = () => {
           </h2>
           <p className="mb-10 max-w-2xl font-Outfit">
             Computer science engineering undergraduate with strong skills in
-            problem solving and communication. Passionate about robotics, and
-            real world problem solving
+            problem solving and communication. Passionate about embedded
+            systems, IoT and robotics.
           </p>
         </div>
       </div>

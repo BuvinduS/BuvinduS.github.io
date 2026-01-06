@@ -70,6 +70,24 @@ export const projectData = [
     ],
   },
   {
+    name: "Speed Estimation using Computer Vision",
+    image: "/project_images/speed_estimation_img.jpg",
+    description:
+      "Prototype system that detects cars and estimates their speed using YOLOv8, BoT-SORT, and OpenCV along with CUDA-accelerated inference (via PyTorch) for near real-time performance",
+    links: [
+      {
+        url: "https://github.com/BuvinduS/YOLO-speed-estimation",
+        text: "GitHub",
+        icon: "github",
+      },
+      {
+        url: "https://youtu.be/lfoYLvTNpbE",
+        text: "Watch Demo",
+        icon: "youtube",
+      },
+    ],
+  },
+  {
     name: "Gesture Based Volume Controller",
     image: "/project_images/volume_control_image.png",
     description:
@@ -88,11 +106,21 @@ export const projectData = [
     description:
       " Developed a 4 bit nano processor capable of executing various instructions using VHDL and AMD Vivado™ Design Suite",
     links: [
-      {
-        url: "https://github.com/nsanjula/Ikmangaman.lk.git",
-        text: "GitHub",
-        icon: "github",
-      },
+      // {
+      //   url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+      //   text: "GitHub",
+      //   icon: "github",
+      // },
+      // {
+      //   url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+      //   text: "Watch Demo",
+      //   icon: "youtube",
+      // },
+      // {
+      //   url: "https://github.com/nsanjula/Ikmangaman.lk.git",
+      //   text: "See More",
+      //   icon: "NONE",
+      // },
     ],
   },
 ];
